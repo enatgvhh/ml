@@ -17,3 +17,4 @@ Die Daten stehen über das [Transparenzportal Hamburg](http://suche.transparenz.
 
 
 ## Summary
+Wir haben uns in den vorhergehenden Kapiteln etwas mit Unsupervised Learning und Supervised Learning beschäftigt. Und es wurde deutlich, dass hier vor allem der Mensch erstmal lernen muss. Lernen welche Methoden, welche Parameter zu wählen sind, wie Entscheidungen zu treffen sind und wie die Ergebnisse sinnvoll interpretiert werden. Die Ergebnisse müssen grundsätzlich kritisch hinterfragt werden. Ganz nach dem Motto "Traue nur der Statistik, die du selbst gefälscht hast". Von daher ist der Begriff multivariate Analysemethoden/Statistik möglicherweise passender.

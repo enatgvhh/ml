@@ -14,7 +14,7 @@ Abb. 2: Verhältnis von Wohnungsarten zueinander
 Abb. 3: Verhältnis von Leistungsempfängern zueinander
 
 ## Clusteranalyse
-Beginnen wir mit dem Unsupervised Learning. Ziel der Clusteranalyse ist es, die Stadtteile in Klassen zu unterteilen, die in sich relativ homogen, untereinander aber möglich verschieden sind.
+Beginnen wir mit dem Unsupervised Learning. Ziel der Clusteranalyse ist es, die Stadtteile in Klassen zu unterteilen, die in sich relativ homogen, untereinander aber möglichst verschieden sind.
 Der gesamte Quellcode des Kapitels ist in einem Jupyter Notebook [IPYNB-File](src/pub_2_clustering.ipynb) gespeichert. Zunächst importieren wir die benötigten Python packages.
 ```
 import re
@@ -103,11 +103,11 @@ plt.xlabel('Cluster')
 plt.ylabel('Distanz')
 plt.show()
 ```
-Die Agglomerationstabelle (vgl. Abb. 4) gibt uns jetzt den ersten Hinweis auf die optimale Anzahl der Cluster. Solange die Gerade homogen ansteigt, sind die Cluster, die miteinander fusioniert werden relativ ähnlich. Sobald die Gerade einen Sprung macht, werden zwei sehr unähnliche Cluster fusioniert. Wir sehen bei 12, 7 und 6 Clustern einen Sprung. Der deutlichste Sprung erfolgt bei der Fusionierung von 6 auf 5 Cluster. 6 Cluster scheinen also die optimale Wahl zu sein. Das überprüfen wir jetzt im Dendrogram (vgl. Abb. 5) und entscheiden uns endgültig für 6 Cluster.
-![2_Figure_1.jpg](img/2_Figure_1.jpg)
+Die Agglomerationstabelle (vgl. Abb. 4) gibt uns den ersten Hinweis auf die optimale Anzahl der Cluster. Solange die Gerade homogen ansteigt, sind die Cluster, die miteinander fusioniert werden relativ ähnlich. Sobald die Gerade einen Sprung macht, werden zwei sehr unähnliche Cluster fusioniert. Wir sehen bei 12, 7 und 6 Clustern einen Sprung. Der deutlichste Sprung erfolgt bei der Fusionierung von 6 auf 5 Cluster. 6 Cluster scheinen also die optimale Wahl zu sein. Das überprüfen wir jetzt im Dendrogram (vgl. Abb. 5) und entscheiden uns endgültig für 6 Cluster.
+![2_Figure_2.jpg](img/2_Figure_2.jpg)
 Abb. 4: Agglomerationstabelle
 
-![2_Figure_2.jpg](img/2_Figure_2.jpg)
+![2_Figure_1.jpg](img/2_Figure_1.jpg)
 Abb. 5: Dendrogram
 
 Jetzt lassen wir die Clusteranalyse nochmals laufen, mit der Vorgabe von 6 Clustern, d.h. jeder der Stadtteile wird nun einem der 6 Cluster zugeordnet. Das Ergebnis hängen wir als neue Spalte 'Cluster' an den DataFrame.

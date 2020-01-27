@@ -63,6 +63,7 @@ print('Label Testdata true:', y_test)
 print('Label Testdata pred:', y_pred)
 ```
 Mit einer Fehlerquote von 20% können wir nicht zufrieden sein. Offensichtlich wurde das Modell zu exakt auf die Trainingsdaten zugeschnitten. Im Machine Learning spricht man vom Overfitting, das Modell ist zu komplex. Wie können wir das Modell vereinfachen und damit für die Testdaten eine höhere Trefferquote erzielen? Dazu können wir die Anzahl der in die Diskriminanzanalyse einbezogenen Features reduzieren sowie die Anzahl der Diskriminanzfunktionen selbst.
+
 Beginnen wir mit der Reduzierung von Features. Dazu verwenden wir die sklearn recursive feature elimination (RFE) mit einem Random-Forest-Klassifikator. Im RFE-Konstruktor geben wir an, dass eine Reduktion auf 38 Features erfolgen soll. Diesen Wert muss man durch probieren herausfinden. Dann nehmen wir unseren neuen Datensatz mit nur noch 38 Features, splitten ihn wiederum in einen Trainings- und Testdatensatz und führen eine neue Diskriminanzanalyse durch. Die Trainingsdaten werden nun schon zu 90% dem richtigen Cluster zugeordnet.
 ```
 estimator = RandomForestClassifier(max_depth=2, random_state=8)
