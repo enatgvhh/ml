@@ -26,7 +26,6 @@ df = pd.read_csv(strSource, sep=';', header=0, encoding='iso-8859-1')
 Legen die Methode createIndex an, die eine neue Spalte 'id' als Index dem übergebenen DataFrame hinzufügt.
 ```
 def createIndex(df):
-    #Create Coumn ID and set as Index
     newIndex = []
     for i in df.index:
         i += 1
