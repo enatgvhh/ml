@@ -79,7 +79,7 @@ dfp = createIndex(dfp)
 ```
 
 ## Wiederholung Clusteranalyse
-Für die Clusteranalyse verwenden wir die gleichen Parameter wir im vorherigen Kapitel. Wir entscheiden uns diesmal allerdings für 7 Cluster. Das Ergebnis ist in Abb. 8 zu sehen. Die Interpretation und Überprüfung der Cluster habe ich hier nicht mehr durchgeführt.
+Für die Clusteranalyse verwenden wir die gleichen Parameter wie im vorherigen Kapitel. Wir entscheiden uns diesmal allerdings für 7 Cluster. Das Ergebnis ist in Abb. 8 zu sehen. Die Interpretation und Überprüfung der Cluster habe ich hier nicht mehr durchgeführt. Das ist nach einer Hauptkomponentenanalyse auch nicht mehr so einfach. Jede Hauptkomponente muss dazu zunächst charakterisiert werden.
 ```
 def plot_dendrogram(model, **kwargs):
     # Create linkage matrix and then plot the dendrogram
